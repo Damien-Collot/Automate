@@ -41,6 +41,7 @@ public class Automate {
                 return value;
             }
         }
+        return null;
     }
     
     public boolean appartient(String mot){
