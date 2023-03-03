@@ -12,7 +12,12 @@ public class Etat {
 
     public Etat(String nom, ArrayList<String> alphabet) {
         this.name = nom;
+        this.typeEtat = TypeEtat.Transition;
         createMapSymbol(alphabet);
+    }
+
+    public String getName() {
+        return name;
     }
 
     public TypeEtat getTypeEtat() {

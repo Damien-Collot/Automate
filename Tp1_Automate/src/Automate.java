@@ -1,22 +1,54 @@
+import java.io.FileReader;
+import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 public class Automate {
 
-    private String nomFichier;
     private ArrayList<String> alphabet;
-    private ArrayList<Etat> listeEtat;
+    private ArrayList<Etat> listeEtat = new ArrayList<>();
 
     public Automate(String nomFichier) {
-        this.nomFichier = nomFichier;
-    }
+        JSONParser parser = new JSONParser();
+        try {
+            // Parse le fichier et stocke le json dans file
+            JSONObject file = (JSONObject) parser.parse(new FileReader(nomFichier));
+            this.alphabet = (ArrayList<String>) file.get("Alphabet");
 
-    public String getNomFichier() {
-        return nomFichier;
-    }
+            // Création de la liste d'Etat et initialisation de la map pour changer le type des Etats
+            ArrayList<String> listEtat =  (ArrayList<String>) file.get("Etats");
+            HashMap<String, Etat> mapEtat = new HashMap<>();
+            for (String nom : listEtat){
+                var Etat = new Etat(nom, alphabet);
+                listeEtat.add(Etat);
+                mapEtat.put(nom, Etat);
+            }
 
-    public void setNomFichier(String nomFichier) {
-        this.nomFichier = nomFichier;
+            String etatInitial = (String) file.get("EtatInitial");
+            mapEtat.get(etatInitial).setTypeEtat(TypeEtat.Initial);
+
+            ArrayList<String> etatFinaux = (ArrayList<String>) file.get("EtatsFinaux");
+
+            for (String nom : etatFinaux){
+                mapEtat.get(nom).setTypeEtat(TypeEtat.Final);
+            }
+
+            JSONArray transition = (JSONArray) file.get("Transitions");
+
+            for (int i = 0; i < transition.size(); i++) {
+                JSONObject jsonobject = (JSONObject) transition.get(i);
+                mapEtat.get(jsonobject.get("ori")).addLiaison((String) jsonobject.get("symbol"), mapEtat.get(jsonobject.get("dest")));
+            }
+
+        } catch (IOException | ParseException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public ArrayList<String> getAlphabet() {

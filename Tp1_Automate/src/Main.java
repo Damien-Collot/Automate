@@ -1,5 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        var AUto = new Automate("Exemple.json");
+        System.out.println(AUto.appartient("aababba"));
+
     }
 }
