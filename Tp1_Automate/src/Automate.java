@@ -46,7 +46,14 @@ public class Automate {
     
     public boolean appartient(String mot){
         Etat etatActuel = this.getEtatInitial();
-        
-        return false;
+        String[] str = mot.split("");
+        for (String val: str) {
+            Etat destination = etatActuel.getDestination(val);
+            if (destination == null){
+                return false;
+            }
+            etatActuel = destination;
+        }
+        return etatActuel.getTypeEtat() == TypeEtat.Final;
     }
 }
