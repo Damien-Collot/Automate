@@ -81,6 +81,12 @@ public class Automate {
         String[] str = mot.split("");
         for (String val: str) {
             Etat destination = etatActuel.getDestination(val);
+
+            if (!alphabet.contains(val)){
+                System.out.println("Symbole : " + val + " pas présent dans l'alphabet");
+                return false;
+            }
+
             if (destination == null){
                 System.out.println("Symbole provoquant l'erreur : " + val);
                 return false;

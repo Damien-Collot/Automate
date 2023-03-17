@@ -36,6 +36,7 @@
     {"symbol" : "L", "ori" :  "q50", "dest" :  "qL"},
     {"symbol" : "d", "ori" :  "q60", "dest" :  "q50"},
     {"symbol" : "v", "ori" :  "q70", "dest" :  "q50"},
+    {"symbol" : "d", "ori" :  "q70", "dest" :  "q60"},
     {"symbol" : "d", "ori" :  "q80", "dest" :  "q70"},
     {"symbol" : "v", "ori" :  "q80", "dest" :  "q60"},
     {"symbol" : "v", "ori" :  "q90", "dest" :  "q70"},

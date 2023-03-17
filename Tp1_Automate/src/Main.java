@@ -5,9 +5,9 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
-        var Auto = new Automate("C:\\Users\\nicol\\Documents\\Cours\\Automate et langage\\TP\\Tp1_Automate\\Distributeur.json");
+        var Auto = new Automate("Distributeur.json");
         try {
-            File file = new File("C:\\Users\\nicol\\Documents\\Cours\\Automate et langage\\TP\\Tp1_Automate\\testDistributeur.txt");
+            File file = new File("testDistributeur.txt");
             FileReader fr = new FileReader(file);
             BufferedReader br = new BufferedReader(fr);
             String line;
