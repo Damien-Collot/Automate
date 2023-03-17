@@ -82,10 +82,17 @@ public class Automate {
         for (String val: str) {
             Etat destination = etatActuel.getDestination(val);
             if (destination == null){
+                System.out.println("Symbole provoquant l'erreur : " + val);
                 return false;
             }
             etatActuel = destination;
         }
-        return etatActuel.getTypeEtat() == TypeEtat.Final;
+
+        if (etatActuel.getTypeEtat() != TypeEtat.Final){
+            System.out.println("On arrive pas à un êtat terminal");
+            return false;
+        } else {
+            return true;
+        }
     }
 }
