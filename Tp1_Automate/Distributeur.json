@@ -42,6 +42,8 @@
     {"symbol" : "v", "ori" :  "q90", "dest" :  "q70"},
     {"symbol" : "d", "ori" :  "q90", "dest" :  "q80"},
     {"symbol" : "c", "ori" :  "q100", "dest" :  "q50"},
+    {"symbol" : "d", "ori" :  "q100", "dest" :  "q90"},
+    {"symbol" : "v", "ori" :  "q100", "dest" :  "q90"},
     {"symbol" : "d", "ori" :  "q1040", "dest" :  "qS"},
     {"symbol" : "v", "ori" :  "q2050", "dest" :  "qS"},
     {"symbol" : "l", "ori" :  "qL", "dest" :  "qF"},
