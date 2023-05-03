@@ -1,11 +1,43 @@
 {
-    "Alphabet" : ["a", "b"],
-    "Etats" : ["S1", "S2", "S3"],
-    "EtatInitial" : "S1",
-    "EtatsFinaux" : ["S3"],
-    "Transitions" : [ { "symbol" : "a", "ori" :  "S1", "dest" :  "S1"},
-        {"symbol" : "b", "ori" :  "S1", "dest" :  "S2"},
-        {"symbol" : "b", "ori" :  "S2", "dest" :  "S2"},
-        {"symbol" : "a", "ori" :  "S2", "dest" :  "S3"}]
+    "Alphabet": ["a", "b"],
+    "Etats": ["S1", "S2", "S3"],
+    "EtatInitial": "S1",
+    "EtatsFinaux": ["S3"],
+    "Transitions": [
+        {
+            "symbol": "a",
+            "ori": "S1",
+            "dest": "S2",
+            "pop": "Z",
+            "push": "XZ"
+        },
+        {
+            "symbol": "a",
+            "ori": "S2",
+            "dest": "S2",
+            "pop": "X",
+            "push": "XX"
+        },
+        {
+            "symbol": "b",
+            "ori": "S2",
+            "dest": "S3",
+            "pop": "X",
+            "push": ""
+        },
+        {
+            "symbol": "b",
+            "ori": "S3",
+            "dest": "S3",
+            "pop": "X",
+            "push": ""
+        },
+        {
+            "symbol": "",
+            "ori": "S3",
+            "dest": "S3",
+            "pop": "Z",
+            "push": ""
+        }
+    ]
 }
-

@@ -4,11 +4,8 @@ import java.util.Map;
 
 public class Etat {
     private String name;
-
     private TypeEtat typeEtat;
-
-    private Map<String, Etat> mapSymboleDestination;
-
+    private Map<String, Transition> mapSymboleTransition;
 
     public Etat(String nom, ArrayList<String> alphabet) {
         this.name = nom;
@@ -28,18 +25,20 @@ public class Etat {
         this.typeEtat = typeEtat;
     }
 
-    private void createMapSymbol(ArrayList<String> alphabet){
-        this.mapSymboleDestination = new HashMap<String, Etat>();
-        for (String symbol : alphabet){
-            this.mapSymboleDestination.put(symbol,null);
+    private void createMapSymbol(ArrayList<String> alphabet) {
+        this.mapSymboleTransition = new HashMap<String, Transition>();
+        for (String symbol : alphabet) {
+            this.mapSymboleTransition.put(symbol, null);
         }
     }
 
-    public void addLiaison(String symbole, Etat destination){
-        this.mapSymboleDestination.replace(symbole, destination);
+    public void addLiaison(String symbole, String pop, String push, Etat destination) {
+        Transition transition = new Transition(symbole, pop, push, destination);
+        this.mapSymboleTransition.replace(symbole, transition);
     }
 
-    public Etat getDestination(String symbole) {
-        return mapSymboleDestination.get(symbole);
+
+    public Transition getTransition(String symbole) {
+        return mapSymboleTransition.get(symbole);
     }
 }
