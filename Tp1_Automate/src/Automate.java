@@ -104,16 +104,18 @@ public class Automate {
             }
 
             var depile = pile.getLast();
-            if (pile.isEmpty() || !depile.equals(transition.getPop())) {
-                System.out.println("Erreur lors du dépilement : " + val);
-                return false;
-            } else {
-                pile.removeLast();
-                for (int i=transition.getPush().length()-1;i>=0;i--){
-                    pile.add(String.valueOf(transition.getPush().charAt(i)));
+            if (transition.getPop() != null) {
+                if (pile.isEmpty() || !depile.equals(transition.getPop())) {
+                    System.out.println("Erreur lors du dépilement : " + val);
+                    return false;
+                } else {
+                    pile.removeLast();
+                    for (int i = transition.getPush().length() - 1; i >= 0; i--) {
+                        pile.add(String.valueOf(transition.getPush().charAt(i)));
+                    }
                 }
-                etatActuel = transition.getDestination();
             }
+            etatActuel = transition.getDestination();
         }
         return etatActuel.getTypeEtat() == TypeEtat.Final && pile.size() == 1 && pile.getFirst().equals("Z");
     }
