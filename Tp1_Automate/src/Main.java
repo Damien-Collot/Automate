@@ -13,10 +13,10 @@ public class Main {
             String line;
             while((line = br.readLine()) != null)
             {
-                System.out.println("--------------");
+                System.out.println("------------------------------------------------");
                 System.out.println("Expression : " + line + " | " + (Auto.appartient(line) ? "Appartient à l'automate" : "N'appartient pas à l'automate"));
             }
-            System.out.println("--------------");
+            System.out.println("------------------------------------------------");
             fr.close();
         } catch (Exception e) {
             e.printStackTrace();
