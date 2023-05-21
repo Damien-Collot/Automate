@@ -50,7 +50,7 @@ public class Automate {
                 JSONObject jsonobject = (JSONObject) transition.get(i);
                 mapEtat.get(jsonobject.get("ori")).addLiaison(
                         (String) jsonobject.get("symbol"),
-                        (String) jsonobject.get("pop"),
+                        (ArrayList<String>) jsonobject.get("pop"),
                         (String) jsonobject.get("push"),
                         mapEtat.get(jsonobject.get("dest"))
                 );
@@ -104,14 +104,20 @@ public class Automate {
             }
 
             var depile = pile.getLast();
-            if (transition.getPop() != null) {
-                if (pile.isEmpty() || !depile.equals(transition.getPop())) {
+            if (transition.getPop().isEmpty()) {
+                if (pile.isEmpty() || !transition.getPop().contains(depile)){
                     System.out.println("Erreur lors du dépilement : " + val);
                     return false;
                 } else {
-                    pile.removeLast();
-                    for (int i = transition.getPush().length() - 1; i >= 0; i--) {
-                        pile.add(String.valueOf(transition.getPush().charAt(i)));
+                    if (!depile.equals("Z")) {
+                        pile.removeLast();
+                        for (int i = transition.getPush().length() - 1; i >= 0; i--) {
+                            pile.add(String.valueOf(transition.getPush().charAt(i)));
+                        }
+                    } else {
+                        if (transition.getPush().equals("XX")) {
+                            pile.add("X");
+                        }
                     }
                 }
             }

@@ -1,10 +1,14 @@
+import java.sql.Struct;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Transition {
     private String symbol;
-    private String pop;
+    private ArrayList<String> pop = new ArrayList<>();
     private String push;
     private Etat destination;
 
-    public Transition(String symbol, String pop, String push, Etat destination) {
+    public Transition(String symbol, ArrayList<String> pop, String push, Etat destination) {
         this.symbol = symbol;
         this.pop = pop;
         this.push = push;
@@ -19,11 +23,11 @@ public class Transition {
         this.symbol = symbol;
     }
 
-    public String getPop() {
+    public ArrayList<String> getPop() {
         return pop;
     }
 
-    public void setPop(String pop) {
+    public void setPop(ArrayList<String> pop) {
         this.pop = pop;
     }
 

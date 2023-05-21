@@ -8,35 +8,35 @@
             "symbol": "a",
             "ori": "S1",
             "dest": "S2",
-            "pop": "Z",
+            "pop": ["Z"],
             "push": "XZ"
         },
         {
             "symbol": "a",
             "ori": "S2",
             "dest": "S2",
-            "pop": "X",
+            "pop": ["X"],
             "push": "XX"
         },
         {
             "symbol": "b",
             "ori": "S2",
             "dest": "S3",
-            "pop": "X",
+            "pop": ["X"],
             "push": ""
         },
         {
             "symbol": "b",
             "ori": "S3",
             "dest": "S3",
-            "pop": "X",
+            "pop": ["X"],
             "push": ""
         },
         {
             "symbol": "",
             "ori": "S3",
             "dest": "S3",
-            "pop": "Z",
+            "pop": ["Z"],
             "push": ""
         }
     ]

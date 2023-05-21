@@ -32,7 +32,7 @@ public class Etat {
         }
     }
 
-    public void addLiaison(String symbole, String pop, String push, Etat destination) {
+    public void addLiaison(String symbole, ArrayList<String> pop, String push, Etat destination) {
         Transition transition = new Transition(symbole, pop, push, destination);
         this.mapSymboleTransition.replace(symbole, transition);
     }
