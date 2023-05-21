@@ -104,12 +104,12 @@ public class Automate {
             }
 
             var depile = pile.getLast();
-            if (transition.getPop().isEmpty()) {
+            if (!transition.getPop().isEmpty()) {
                 if (pile.isEmpty() || !transition.getPop().contains(depile)){
                     System.out.println("Erreur lors du dépilement : " + val);
                     return false;
                 } else {
-                    if (!depile.equals("Z") && pile.size() == 1) {
+                    if (!depile.equals("Z") && pile.size() != 1) {
                         pile.removeLast();
                         for (int i = transition.getPush().length() - 1; i >= 0; i--) {
                             pile.add(String.valueOf(transition.getPush().charAt(i)));
