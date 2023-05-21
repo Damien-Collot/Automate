@@ -1,0 +1,477 @@
+{
+    "Alphabet": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "(", ")", "+", "-", "*", "/"],
+    "Etats": ["q0", "q1", "q2", "q3", "q4", "q5"],
+    "EtatInitial": "q0",
+    "EtatsFinaux": ["q3","q5"],
+    "Transitions": [
+        {
+            "symbol": "(",
+            "ori": "q0",
+            "dest": "q2",
+            "pop": ["X"],
+            "push": ["X", "X"]
+        },
+        {
+            "symbol": "(",
+            "ori": "q2",
+            "dest": "q2",
+            "pop": ["X"],
+            "push": ["X", "X"]
+        },
+        {
+            "symbol": "(",
+            "ori": "q0",
+            "dest": "q2",
+            "pop": ["Z"],
+            "push": ["X", "Z"]
+        },
+        {
+            "symbol": "1",
+            "ori": "q2",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "2",
+            "ori": "q2",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "3",
+            "ori": "q2",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "4",
+            "ori": "q2",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "5",
+            "ori": "q2",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "6",
+            "ori": "q2",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "7",
+            "ori": "q2",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "8",
+            "ori": "q2",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "9",
+            "ori": "q2",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "1",
+            "ori": "q0",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "2",
+            "ori": "q0",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "3",
+            "ori": "q0",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "4",
+            "ori": "q0",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "5",
+            "ori": "q0",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "6",
+            "ori": "q0",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "7",
+            "ori": "q0",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "8",
+            "ori": "q0",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "9",
+            "ori": "q0",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "0",
+            "ori": "q1",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "1",
+            "ori": "q1",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "2",
+            "ori": "q1",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "3",
+            "ori": "q1",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "4",
+            "ori": "q1",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "5",
+            "ori": "q1",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "6",
+            "ori": "q1",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "7",
+            "ori": "q1",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "8",
+            "ori": "q1",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "9",
+            "ori": "q1",
+            "dest": "q1",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "+",
+            "ori": "q1",
+            "dest": "q4",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "-",
+            "ori": "q1",
+            "dest": "q4",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "*",
+            "ori": "q1",
+            "dest": "q4",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "/",
+            "ori": "q1",
+            "dest": "q4",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "1",
+            "ori": "q4",
+            "dest": "q3",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "2",
+            "ori": "q4",
+            "dest": "q3",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "3",
+            "ori": "q4",
+            "dest": "q3",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "4",
+            "ori": "q4",
+            "dest": "q3",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "5",
+            "ori": "q4",
+            "dest": "q3",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "6",
+            "ori": "q4",
+            "dest": "q3",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "7",
+            "ori": "q4",
+            "dest": "q3",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "8",
+            "ori": "q4",
+            "dest": "q3",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "9",
+            "ori": "q4",
+            "dest": "q3",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "(",
+            "ori": "q4",
+            "dest": "q0",
+            "pop": ["Z"],
+            "push": ["X","Z"]
+        },
+        {
+            "symbol": "(",
+            "ori": "q4",
+            "dest": "q0",
+            "pop": ["X"],
+            "push": ["X","X"]
+        },
+        {
+            "symbol": ")",
+            "ori": "q3",
+            "dest": "q5",
+            "pop": ["X"],
+            "push": []
+        },
+        {
+            "symbol": "0",
+            "ori": "q3",
+            "dest": "q3",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "1",
+            "ori": "q3",
+            "dest": "q3",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "2",
+            "ori": "q3",
+            "dest": "q3",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "3",
+            "ori": "q3",
+            "dest": "q3",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "4",
+            "ori": "q3",
+            "dest": "q3",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "5",
+            "ori": "q3",
+            "dest": "q3",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "6",
+            "ori": "q3",
+            "dest": "q3",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "7",
+            "ori": "q3",
+            "dest": "q3",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "8",
+            "ori": "q3",
+            "dest": "q3",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "9",
+            "ori": "q3",
+            "dest": "q3",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "+",
+            "ori": "q3",
+            "dest": "q0",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "-",
+            "ori": "q3",
+            "dest": "q0",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "*",
+            "ori": "q3",
+            "dest": "q0",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "/",
+            "ori": "q3",
+            "dest": "q0",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": ")",
+            "ori": "q5",
+            "dest": "q5",
+            "pop": ["X"],
+            "push": []
+        },
+        {
+            "symbol": ")",
+            "ori": "q5",
+            "dest": "q5",
+            "pop": ["Z"],
+            "push": ["Z"]
+        },
+        {
+            "symbol": "+",
+            "ori": "q5",
+            "dest": "q0",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "-",
+            "ori": "q5",
+            "dest": "q0",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "*",
+            "ori": "q5",
+            "dest": "q0",
+            "pop": [],
+            "push": []
+        },
+        {
+            "symbol": "/",
+            "ori": "q5",
+            "dest": "q0",
+            "pop": [],
+            "push": []
+        }
+    ]
+}
