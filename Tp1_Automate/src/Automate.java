@@ -109,7 +109,7 @@ public class Automate {
                     System.out.println("Erreur lors du dépilement : " + val);
                     return false;
                 } else {
-                    if (!depile.equals("Z")) {
+                    if (!depile.equals("Z") && pile.size() == 1) {
                         pile.removeLast();
                         for (int i = transition.getPush().length() - 1; i >= 0; i--) {
                             pile.add(String.valueOf(transition.getPush().charAt(i)));
